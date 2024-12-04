@@ -78,8 +78,8 @@ def predict():
                 "predicted_genre": genre_name,
                 "confidence": confidence
             }
-        return jsonify({"predicted_genre": response['predicted_genre']})
-        #return render_template("vgg.html", result=response['predicted_genre'])
+        #return jsonify({"predicted_genre": response['predicted_genre']})
+        return render_template("vgg.html", result=response['predicted_genre'])
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500
