@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                     cleanWs()
-                    bat 'git clone https://github.com/sbouiranime/Mini-Projet-Docker.git .'
+                    bat 'git clone https://github.com/Bettaieb-Roua/projet-docker.git .'
                 }
             }
         }
