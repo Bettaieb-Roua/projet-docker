@@ -87,7 +87,8 @@ def upload_file_svm():
         ans = svm_model.predict([S_DB])[0]
         music_class = str(ans)
         
-        return jsonify({"result": music_class}), 200
+        #return jsonify({"result": music_class}), 200
+        return render_template("svm.html", result=music_class)
     
     except Exception as e:
         print(f"Unexpected error processing file: {e}")
