@@ -39,12 +39,6 @@ pipeline {
                     bat 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -m unittest discover VggApp/tests/ > result.log'
                 }
             }
-            post {
-                always {
-                    // Publier les résultats des tests (si vous avez un rapport XML)
-                    junit '**/test-reports/*.xml'
-                }
-            }
         }
     }
 
