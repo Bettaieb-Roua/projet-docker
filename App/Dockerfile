@@ -21,7 +21,6 @@ RUN pip install -r /var/www/App/requirements.txt
 
 RUN pip install --ignore-installed six watson-developer-cloud
 RUN pip install soundfile
-RUN pip install --upgrade tensorflow
 
 # Set the working directory to /app
 WORKDIR /app
