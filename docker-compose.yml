@@ -1,4 +1,4 @@
-version: '3.8'  # Use a more recent version for better compatibility
+version: "3.8" # Use a more recent version for better compatibility
 services:
   svmbackend:
     build:
@@ -6,7 +6,8 @@ services:
       dockerfile: ./Dockerfile
     restart: always
     ports:
-      - "8080:8080"
+      - "8080:8080" # Port principal
+      - "8081:8081" # Port supplémentaire pour l'upload SVM
     networks:
       - app_network
 
@@ -16,7 +17,8 @@ services:
       dockerfile: ./Dockerfile
     restart: always
     ports:
-      - "8083:8083"
+      - "8083:8083" # Port principal
+      - "8082:8082" # Port supplémentaire pour l'upload VGG
     networks:
       - app_network
 
@@ -26,7 +28,7 @@ services:
       dockerfile: ./Dockerfile
     restart: always
     ports:
-      - "5000:5000"
+      - "5000:5000" # Port pour l'interface principale
     networks:
       - app_network
     depends_on:
